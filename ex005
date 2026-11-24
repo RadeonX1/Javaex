@@ -1,0 +1,35 @@
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter positive number : ");
+        long num = sc.nextLong();
+
+        int odd = 0;
+        int even = 0;
+        int zero = 0;
+
+        while (num > 0) {
+            int digit = (int)(num % 10);
+
+            if (digit == 0) {
+                zero++;
+            } else if (digit % 2 == 0) {
+                even++;
+            } else {
+                odd++;
+            }
+
+            num = num / 10;
+        }
+
+        System.out.println("Odd digit = " + odd);
+        System.out.println("Even digit = " + even);
+        System.out.println("Zero digit = " + zero);
+
+        sc.close();
+    }
+}
