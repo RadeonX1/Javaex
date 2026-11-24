@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter integer number (4 digit) : ");
+        int num = sc.nextInt();
+
+        int a = num / 1000;
+        int b = (num / 100) % 10;
+        int c = (num / 10) % 10;
+        int d = num % 10;
+
+        if (a % 2 == 0)
+            System.out.println(a + " is Even");
+        else
+            System.out.println(a + " is Odd");
+
+        if (b % 2 == 0)
+            System.out.println(b + " is Even");
+        else
+            System.out.println(b + " is Odd");
+
+        if (c % 2 == 0)
+            System.out.println(c + " is Even");
+        else
+            System.out.println(c + " is Odd");
+
+        if (d % 2 == 0)
+            System.out.println(d + " is Even");
+        else
+            System.out.println(d + " is Odd");
+
+        if (num % 2 == 0)
+            System.out.println("Number " + num + " is Even.");
+        else
+            System.out.println("Number " + num + " is Odd.");
+
+        sc.close();
+    }
+}
